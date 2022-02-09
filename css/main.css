@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins' sans-serif;
+}
+:root {
+  --primaryColor: #fff;
+  --secundaryColor: #000;
+  --bgColor-100: #092020;
+  --bgColor-200: #091020;
+  --bgColor-300: #090010;
+  --borderColor: 1px solid #090010;
+}
+body {
+  min-height: 100vh;
+  font-size: 1.4em;
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--bgColor-100);
+}
+.calculator {
+  position: relative;
+  display: grid;
+}
+.calculator .value {
+  height: 100px;
+  padding: 10px;
+  grid-column: span 4;
+  text-align: right;
+  border: none;
+  outline: none;
+  font-size: 18px;
+}
+.calculator span {
+  width: 60px;
+  height: 60px;
+  border: var(--borderColor);
+  color: var(--primaryColor);
+  display: grid;
+  place-items: center;
+  background-color: var(--bgColor-200);
+}
+.calculator span:hover {
+  background-color: var(--bgColor-300);
+}
+.calculator span:active {
+  color: var(--secundaryColor);
+  background-color: var(--bgColor-300);
+}
+.calculator span.clear {
+  width: 120px;
+  grid-column: span 2;
+  background-color: var(--bgColor-300);
+}
+.calculator span.plus {
+  height: 120px;
+  grid-row: span 2;
+}
+.calculator span.equal {
+  background-color: var(--bgColor-300);
+}
